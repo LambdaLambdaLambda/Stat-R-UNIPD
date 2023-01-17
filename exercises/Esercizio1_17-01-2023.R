@@ -21,6 +21,7 @@ car::leveneTest(milk ~ as.factor(breed), data=cows) #Levene’s test
 #skew below 0.48 is ok (if it is >= 0.5 then the sample could be not from a normal distribution)
 #the null hypothesis of the Levene test is that variances are homogeneous
 # we accept the null hypothesis because Pr(>F) = 0.5878 we have only 1 degree of freedom because the breeds are 2: "BrownSwiss" and "HolsteinFriesian"
+# we consider here a confidence level of 0.05. We accept because 0.5878 > 0.05
 
 #######################################################
 #Plots
@@ -38,4 +39,9 @@ qqnorm(cows$milk)
 qqline(cows$milk)
 
 # The assumptions fo running the ANOVA are verified
+
+# We are running a univariate analysis. There is only one response variable (milk production)
+# and the one-way ANOVA test wants to understand wether there is a different milk production 
+# due to the two different breeds
+
 
