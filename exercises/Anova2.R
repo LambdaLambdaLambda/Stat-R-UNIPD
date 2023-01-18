@@ -60,6 +60,6 @@ fm3 <- Anova(lm(y ~ trt + litter, data=rcbd), type=3)
 summary(fm3) 
 Anova(lm(y ~ trt + litter, data=rcbd), type=3)
 
-
+library("emmeans")
 
 
